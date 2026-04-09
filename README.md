@@ -1,27 +1,31 @@
-# Exploratory Data Analysis (EDA) on Financial Analytics - SQL
+# Data Migration & Finance Analytics - SQL
+
 ## Problem Statement  
-As AtliQ Hardware expanded globally, the company faced significant data management challenges. Initially relying on Excel, the company struggled with large datasets, leading to frequent crashes and operational disruptions. A transition to MySQL was implemented to manage the growing data effectively and support the company's expansion.
+AtliQ Hardware, a B2B manufacturer and distributor of computer peripherals, operated across multiple global markets but stored all operational data in Excel files — product sales, customer records, market data, and financial transactions. As business volumes scaled, Excel became the bottleneck: files crashed, reports took hours to refresh, and leadership had no reliable, real-time view of financial performance.
 
 ## Project Overiew
-The goal of this analysis is to provide a comprehensive view of AtliQ Hardware’s financial health and identify areas for performance optimization. Specifically, the analysis aims to:
+This project addresses the problem in two phases:
+- Phase 1 Migrated all Excel data into a structured MySQL relational database.
+- Phase 2 Built a suite of automated finance analytics reports — replacing every manual Excel process with reusable, parameterised SQL artifacts.
 
-- **Track profitability and revenue trends by market**
-- **Identify consistently underperforming products**
-- **Evaluate cost structures to highlight unprofitable SKUs**
-- **Automate recurring business reporting**
-- **Understand sales patterns across time and geographies**
+## Key Workstreams
+- Track profitability and revenue trends by market
+- Automate recurring business reporting
+- Built monthly product-level sales reports for Croma India
+- Developed customer-level gross sales tracking using stored procedures
+- Designed market segmentation logic (Gold vs Silver) based on sales thresholds
+- Created Top N analysis for markets, products, and customers by net sales
+- Generated regional performance breakdowns and contribution % analysis
+- Identified top 2 performing markets per region using ranking functions
 
-##  Business Questions Addressed
-- **Which markets are the most/least profitable?**
-- **Are there products with consistently low sales across all markets?**
-- **Are any SKUs priced below their production and distribution costs?**
-- **How do customer segments perform year-over-year?**
-- **What is the product-level contribution to total revenue?**
-- **How is financial performance changing across fiscal years?**
+## Concepts Used 
+- Stored Procedures
+- User Defined Functions (UDFs)
+- Views for modular reporting
+- Window Functions (DENSE_RANK, RANK, ROW_NUMBER, OVER())
+- Query Optimization Techniques
 
-## Deep-Dive Explorations
-- **Profit and Loss Statements** : Calculated company-wide revenue, costs, and profits to evaluate overall financial performance.
-- **Product-Level Analysis** : Assessed SKUs by sales, revenue, and cost to pinpoint high-performing and low-performing products.
-- **Customer Drilldowns** : Used stored procedures to dynamically analyze customer-level performance by fiscal year.
-- **Unproductive SKUs** : Identified low-demand products across markets, highlighting opportunities for discounting or discontinuation.
-- **Yearly Financial Analysis** : Explored year-over-year trends to assess business growth and seasonal performance. Created a fiscal year and quater UDF to ensure accuracy.
+##  Impact
+- Enabled faster and scalable financial reporting
+- Improved decision-making for market and product strategy
+- Built a reusable SQL framework for Top-N and segmentation analysis
