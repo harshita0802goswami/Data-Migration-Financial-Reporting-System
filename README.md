@@ -26,6 +26,8 @@ This project addresses the problem in two phases:
 - Query Optimization Techniques
 
 ##  Impact
+- Reduced query runtime by ~78% (13s → 2.8s) by eliminating redundant UDF calls and introducing an optimized date dimension table.
 - Enabled faster and scalable financial reporting
 - Improved decision-making for market and product strategy
 - Built a reusable SQL framework for Top-N and segmentation analysis
+  
